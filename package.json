@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vicinaehq/vicinae/refs/heads/main/extra/schemas/extension.json",
+  "name": "firefox-bookmarks",
+  "title": "Firefox Bookmarks",
+  "description": "Automatically fetches and allows the search of Firefox bookmarks in Vicinae.",
+  "categories": [],
+  "license": "MIT",
+  "author": "KeremBayulgen",
+  "contributors": [
+    "kerembayulgen"
+  ],
+  "pastContributors": [],
+  "icon": "extension_icon.png",
+  "commands": [
+    {
+      "name": "firefox-bookmarks",
+      "title": "Firefox Bookmarks",
+      "subtitle": "Search in your firefox bookmarks.",
+      "description": "Automatically fetches and allows the search of Firefox bookmarks in Vicinae.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "install-method",
+      "title": "Install Method",
+      "description": "How Firefox was installed on your system.",
+      "type": "dropdown",
+      "required": true,
+      "default": "Flatpak",
+      "data": [
+        {
+          "title": "Flatpak",
+          "value": "Flatpak"
+        },
+        {
+          "title": "System",
+          "value": "System"
+        },
+        {
+          "title": "Snap",
+          "value": "Snap"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "title": "Profile Override",
+      "description": "Override the default profile to pull bookmarks from.",
+      "type": "textfield",
+      "required": false
+    }
+  ],
+  "scripts": {
+    "build": "vici build",
+    "dev": "vici develop",
+    "lint": "eslint --ext .js,.ts .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+  },
+  "dependencies": {
+    "@vicinae/api": "~0.9.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "~9.35.0",
+    "eslint-plugin-react": "~7.37.5",
+    "globals": "~16.4.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "~8.43.0"
+  }
+}
