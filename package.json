@@ -21,6 +21,40 @@
     }
   ],
   "preferences": [
+	  {
+	    "name": "browser",
+	    "title": "Preferred Browser",
+	    "description": "The browser to pull bookmarks from. Snap option may not be available for all configurations.",
+	    "default": "Firefox",
+	    "type": "dropdown",
+	    "required": true,
+	    "data": [
+		    {
+			    "title": "Firefox",
+			    "value": "Firefox"
+		    },
+		    {
+			    "title": "Zen Browser",
+			    "value": "Zen"
+		    },
+		    {
+			    "title": "Mullvad Browser",
+			    "value": "Mullvad"
+		    },
+		    {
+			    "title": "Librewolf",
+			    "value": "Librewolf"
+		    },
+		    {
+			    "title": "Floorp",
+			    "value": "Floorp"
+		    },
+		    {
+			    "title": "IceCat",
+			    "value": "IceCat"
+		    }
+	    ]
+    },
     {
       "name": "install-method",
       "title": "Install Method",
@@ -43,6 +77,7 @@
         }
       ]
     },
+    
     {
       "name": "profile",
       "title": "Profile Override",
@@ -58,12 +93,12 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "dependencies": {
-    "@vicinae/api": "~0.9.6"
+    "@vicinae/api": "^0.13.3"
   },
   "devDependencies": {
     "@eslint/js": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
     "eslint": "~9.35.0",
     "eslint-plugin-react": "~7.37.5",
     "globals": "~16.4.0",
